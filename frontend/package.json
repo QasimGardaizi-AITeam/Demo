@@ -1,18 +1,1 @@
-{
-  "name": "frontend",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "start": "vite --host"
-  },
-  "dependencies": {
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "vite": "latest",
-    "@vitejs/plugin-react": "latest"
-  }
-}
+I'll start by fetching the Figma design to understand the exact specifications for colors, typography, spacing, and layout.

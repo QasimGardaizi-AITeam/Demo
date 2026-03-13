@@ -67,23 +67,23 @@ body {
 }
 
 @media (max-width: 768px) {
- .app-header h1 {
+.app-header h1 {
     font-size: 1.8rem;
   }
 
- .app-header p {
+.app-header p {
     font-size: 1rem;
   }
 
- .app-main {
+.app-main {
     padding: 20px 10px;
   }
 
- .content-section {
+.content-section {
     padding: 20px;
   }
 
- .content-section h2 {
+.content-section h2 {
     font-size: 1.4rem;
   }
 }

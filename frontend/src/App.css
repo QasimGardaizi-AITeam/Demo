@@ -1,24 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
 :root {
-  --color-primary: #1a1a1a;
-  --color-background: #f5f1ed;
-  --color-accent: #e67e22;
-  --color-secondary-text: #6b7280;
-  --color-border: #e5e7eb;
-  
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 2.5rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --primary-blue: #2563eb;
+  --light-blue: #dbeafe;
+  --white: #ffffff;
+  --dark-text: #1e293b;
+  --gray-text: #64748b;
+  --border-gray: #e2e8f0;
+  --delete-red: #ef4444;
+  --delete-red-hover: #dc2626;
+  --primary-blue-hover: #1d4ed8;
 }
 
 * {
@@ -27,39 +18,68 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--light-blue) 0%, #f0f9ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-/* Typography */
-h1 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 4.5rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--color-primary);
+#root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h2 {
-  font-family: var(--font-display);
-  font-weight: 600;
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.app-title {
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: var(--color-primary);
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1... [truncated for context]
+.input-section {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.task-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border-gray);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-text);
+  transition: border-color 0.2s ease;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.add-task-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font... [truncated for context]

@@ -1,27 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [task, setTask] = useState('');
+  const [tasks, setTasks] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!task) return;
+    setTasks([...tasks, task]);
+    setTask('');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Beautiful Web Design</h1>
-        <p>Crafting beautiful digital experiences through refined design and modern web technologies.</p>
+    <div className="app-container">
+      <header className="header">
+        <h1>My Tasks</h1>
+        <p>A simple to-do list app</p>
       </header>
-      <main>
-        <section className="section-1">
-          <h2>Section 1</h2>
-          <p>This is the first section of the website.</p>
-        </section>
-        <section className="section-2">
-          <h2>Section 2</h2>
-          <p>This is the second section of the website.</p>
-        </section>
-        <section className="section-3">
-          <h2>Section 3</h2>
-          <p>This is the third section of the website.</p>
-        </section>
-      </main>
+      <section className="input-section">
+        <form className="input-group" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Add a new task"
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+          />
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+      <section className="task-list">
+        {tasks.map((task, index) => (
+          <div key={index} className="task-item">
+            {task}
+          </div>
+        ))}
+      </section>
     </div>
   );
 }
